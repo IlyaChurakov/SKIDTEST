@@ -1,0 +1,244 @@
+.maplayout {
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.wrapper {
+		position: relative;
+		width: 100%;
+		max-width: 1200px;
+		.map3,
+		.map4,
+		.map5,
+		.map6 {
+			max-width: 1200px;
+		}
+		.people {
+			width: 25px;
+			height: 25px;
+			border-radius: 50% 50% 50% 0;
+			background-color: #f543b19e;
+			position: absolute;
+			cursor: pointer;
+			display: none;
+			border: 2px solid #796e80;
+			box-shadow: -7px 7px 7px 3px rgba(78, 32, 111, 0.2);
+			&__list {
+				width: 250px;
+				height: 160px;
+				overflow-y: scroll;
+				background-color: rgb(255, 255, 255);
+				position: absolute;
+				top: -155px;
+				left: -94px;
+				padding: 5px 7px;
+				box-sizing: border-box;
+				border-radius: 7px;
+				transition: 0.5s;
+				display: none;
+				color: #484848;
+				border: 2px solid #606060;
+				font-size: 14px;
+				font-weight: 500;
+				z-index: 20;
+				&::-webkit-scrollbar {
+					background: transparent;
+					width: 5px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background-color: #989898;
+					border-radius: 2px;
+				}
+				&_item {
+					line-height: 16px;
+					padding: 5px 0;
+					border-bottom: 1px dashed #484848;
+				}
+			}
+			&__circle {
+				width: 20px;
+				height: 20px;
+				background-color: transparent;
+				border: 2px solid transparent;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #ffffff;
+				font-size: 22px;
+				line-height: 22px;
+				font-weight: 500;
+				box-sizing: border-box;
+				transform: translate(2.5px, 2.5px);
+			}
+			&:hover .people__list {
+				display: block;
+			}
+			&__623 {
+				display: block;
+				top: 133px;
+				left: 296px;
+			}
+			&__621 {
+				display: block;
+				top: 107px;
+				left: 169px;
+			}
+			&__620 {
+				display: block;
+				top: 253px;
+				left: 118px;
+			}
+			&__614 {
+				display: block;
+				top: 326px;
+				left: 390px;
+			}
+			&__610 {
+				display: block;
+				top: 326px;
+				left: 651px;
+			}
+			&__609 {
+				display: block;
+				top: 326px;
+				left: 771px;
+			}
+			&__608 {
+				display: block;
+				top: 326px;
+				left: 832px;
+			}
+			&__607 {
+				display: block;
+				top: 326px;
+				left: 925px;
+			}
+			&__604 {
+				display: block;
+				top: 133px;
+				left: 978px;
+			}
+			&__601 {
+				// кабинет 603, 605
+				display: block;
+				top: 193px;
+				left: 1093px;
+			}
+			&__600 {
+				display: block;
+				top: 229px;
+				left: 672px;
+			}
+			&__516 {
+				display: block;
+				top: 133px;
+				left: 957px;
+			}
+			&__515 {
+				display: block;
+				top: 133px;
+				left: 888px;
+			}
+			&__514 {
+				display: block;
+				top: 133px;
+				left: 349px;
+			}
+			&__513 {
+				display: block;
+				top: 133px;
+				left: 284px;
+			}
+			&__512 {
+				display: block;
+				top: 144px;
+				left: 211px;
+			}
+			&__510 {
+				display: block;
+				top: 280px;
+				left: 136px;
+			}
+			&__509 {
+				display: block;
+				top: 326px;
+				left: 294px;
+			}
+			&__508 {
+				display: block;
+				top: 326px;
+				left: 360px;
+			}
+			&__507 {
+				display: block;
+				top: 326px;
+				left: 506px;
+			}
+			&__506 {
+				display: block;
+				top: 326px;
+				left: 578px;
+			}
+			&__505 {
+				display: block;
+				top: 281px;
+				left: 718px;
+			}
+			&__504 {
+				display: block;
+				top: 326px;
+				left: 818px;
+			}
+			&__501 {
+				display: block;
+				top: 204px;
+				left: 1102px;
+			}
+			&__502 {
+				display: block;
+				top: 326px;
+				left: 926px;
+			}
+			&__500 {
+				display: block;
+				top: 219px;
+				left: 561px;
+			}
+			&__408 {
+				display: block;
+				top: 262px;
+				left: 133px;
+			}
+			&__400 {
+				display: block;
+				top: 241px;
+				left: 716px;
+			}
+			&__308 {
+				display: block;
+				top: 241px;
+				left: 243px;
+			}
+			&__306 {
+				display: block;
+				top: 366px;
+				left: 975px;
+			}
+			&__300 {
+				display: block;
+				top: 241px;
+				left: 727px;
+			}
+		}
+	}
+}
+
+.loading {
+	position: absolute;
+	top: -10%;
+	left: 50%;
+	transform: translateX(-50%);
+}

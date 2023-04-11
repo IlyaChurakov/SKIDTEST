@@ -1,0 +1,98 @@
+.employee {
+	position: relative;
+	margin: 0 auto;
+	min-height: 60%;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	width: 90%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.4fr 1.6fr;
+	justify-items: start;
+	font-size: 14px;
+	&__wrapper {
+		margin-top: 10px;
+		height: 500px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.1fr 0.9fr;
+		column-gap: 30px;
+		&_titles {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			display: grid;
+			grid-template-columns: 1.25fr 0.5fr 1.25fr;
+			justify-items: center;
+			align-items: center;
+			font-size: 16px;
+		}
+	}
+	&__camera {
+		overflow-y: scroll;
+		height: 100%;
+		text-align: center;
+		position: relative;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		&_title {
+			font-size: 20px;
+		}
+		&_event {
+			display: flex;
+			justify-content: space-between;
+			min-height: 30px;
+			border: 1px solid #bbbbbb;
+			border-radius: 5px;
+			margin: 5px 0;
+			align-items: center;
+			padding: 0 10px;
+			box-sizing: border-box;
+			&-time {
+				text-align: center;
+			}
+			&-name {
+				width: 50%;
+				text-align: start;
+			}
+			&-date {
+				width: 50%;
+				text-align: end;
+				margin-right: 30px;
+			}
+		}
+	}
+	&__door {
+		overflow-y: scroll;
+		height: 100%;
+		text-align: center;
+		position: relative;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		&_title {
+			font-size: 20px;
+		}
+		&_event {
+			&-type {
+				width: 16%;
+				text-align: start;
+			}
+			&-name {
+				width: 48%;
+				text-align: start;
+			}
+			&-date {
+				width: 18%;
+				margin-right: 5%;
+				text-align: center;
+			}
+			&-time {
+				width: 13%;
+				text-align: center;
+			}
+		}
+	}
+}

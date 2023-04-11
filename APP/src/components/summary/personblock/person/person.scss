@@ -1,0 +1,28 @@
+.person {
+	display: grid;
+	grid-template-columns: 58px 1.2fr;
+	column-gap: 10px;
+	grid-template-rows: 1.2fr 0.8fr;
+	margin: 5px 0;
+	&__icon {
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	&__name {
+		grid-column-start: 2;
+		display: flex;
+		align-items: end;
+		font-weight: 300;
+		font-size: 20px;
+		text-decoration: none;
+		color: #41414a;
+	}
+	&__post {
+		grid-column-start: 2;
+		display: flex;
+		align-items: start;
+		font-weight: 300;
+		font-size: 12px;
+		max-width: 450px;
+	}
+}

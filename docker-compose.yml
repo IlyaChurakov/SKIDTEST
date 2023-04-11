@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: ./API
+    container_name: back
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/API
+  app:
+    build:
+      context: ./APP
+    container_name: front
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/APP
+  middleware:
+    build:
+      context: ./Middleware
+    container_name: middleware
+    ports:
+      - '8081:8081'
+    volumes:
+      - .:/Middleware
+    stdin_open: true
+    tty: true

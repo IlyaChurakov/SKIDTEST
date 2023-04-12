@@ -21,9 +21,17 @@ class DataController {
 		const year = currentDate.getFullYear()
 		const month = currentDate.getMonth()
 
-		const url = `http://172.16.3.98/events/faces?limit=1000&created_date_gte=${year}-${
-			month.length == 2 ? month : `0${month}`
-		}-${day.length == 2 ? day : `0${day}`}T00:00:00.000Z&no_match=false`
+		const dayStr = String(day)
+		const yearStr = String(year)
+		const monthStr = String(month)
+
+		const url = `http://172.16.3.98/events/faces?limit=1000&created_date_gte=${yearStr}-${
+			monthStr.length == 2 ? monthStr : `0${monthStr}`
+		}-${
+			dayStr.length == 2 ? dayStr : `0${dayStr}`
+		}T00:00:00.000Z&no_match=false`
+
+		console.log(url)
 
 		async function getEvents(url) {
 			await fetch(url, {
@@ -37,7 +45,6 @@ class DataController {
 					return res.json()
 				})
 				.then(async resBody => {
-					console.log('resBody')
 					for await (let item of resBody.results) {
 						await db.query(
 							`INSERT INTO data_store.camera_data (matched_object, id_camera, date, id_dossier)
@@ -50,9 +57,11 @@ class DataController {
 							]
 						)
 					}
-					console.log(resBody)
+					console.log('событие')
 					if (resBody && resBody.next_page) {
 						await getEvents(resBody.next_page)
+					} else {
+						return
 					}
 				})
 				.catch(err => console.log(err))
